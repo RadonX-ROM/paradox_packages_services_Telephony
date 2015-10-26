@@ -18,7 +18,7 @@
 package com.android.phone;
 
 import android.os.Bundle;
-import android.preference.SwitchPreference;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
@@ -125,45 +125,45 @@ public class CellBroadcastSms extends PreferenceActivity
     private static final int MESSAGE_SET_CB_SMS_CONFIG = 3;
 
     //UI objects
-    private SwitchPreference mButtonBcSms;
+    private CheckBoxPreference mButtonBcSms;
 
     private ListPreference mListLanguage;
 
-    private SwitchPreference mButtonEmergencyBroadcast;
-    private SwitchPreference mButtonAdministrative;
-    private SwitchPreference mButtonMaintenance;
-    private SwitchPreference mButtonLocalWeather;
-    private SwitchPreference mButtonAtr;
-    private SwitchPreference mButtonLafs;
-    private SwitchPreference mButtonRestaurants;
-    private SwitchPreference mButtonLodgings;
-    private SwitchPreference mButtonRetailDirectory;
-    private SwitchPreference mButtonAdvertisements;
-    private SwitchPreference mButtonStockQuotes;
-    private SwitchPreference mButtonEo;
-    private SwitchPreference mButtonMhh;
-    private SwitchPreference mButtonTechnologyNews;
-    private SwitchPreference mButtonMultiCategory;
+    private CheckBoxPreference mButtonEmergencyBroadcast;
+    private CheckBoxPreference mButtonAdministrative;
+    private CheckBoxPreference mButtonMaintenance;
+    private CheckBoxPreference mButtonLocalWeather;
+    private CheckBoxPreference mButtonAtr;
+    private CheckBoxPreference mButtonLafs;
+    private CheckBoxPreference mButtonRestaurants;
+    private CheckBoxPreference mButtonLodgings;
+    private CheckBoxPreference mButtonRetailDirectory;
+    private CheckBoxPreference mButtonAdvertisements;
+    private CheckBoxPreference mButtonStockQuotes;
+    private CheckBoxPreference mButtonEo;
+    private CheckBoxPreference mButtonMhh;
+    private CheckBoxPreference mButtonTechnologyNews;
+    private CheckBoxPreference mButtonMultiCategory;
 
-    private SwitchPreference mButtonLocal1;
-    private SwitchPreference mButtonRegional1;
-    private SwitchPreference mButtonNational1;
-    private SwitchPreference mButtonInternational1;
+    private CheckBoxPreference mButtonLocal1;
+    private CheckBoxPreference mButtonRegional1;
+    private CheckBoxPreference mButtonNational1;
+    private CheckBoxPreference mButtonInternational1;
 
-    private SwitchPreference mButtonLocal2;
-    private SwitchPreference mButtonRegional2;
-    private SwitchPreference mButtonNational2;
-    private SwitchPreference mButtonInternational2;
+    private CheckBoxPreference mButtonLocal2;
+    private CheckBoxPreference mButtonRegional2;
+    private CheckBoxPreference mButtonNational2;
+    private CheckBoxPreference mButtonInternational2;
 
-    private SwitchPreference mButtonLocal3;
-    private SwitchPreference mButtonRegional3;
-    private SwitchPreference mButtonNational3;
-    private SwitchPreference mButtonInternational3;
+    private CheckBoxPreference mButtonLocal3;
+    private CheckBoxPreference mButtonRegional3;
+    private CheckBoxPreference mButtonNational3;
+    private CheckBoxPreference mButtonInternational3;
 
-    private SwitchPreference mButtonLocal4;
-    private SwitchPreference mButtonRegional4;
-    private SwitchPreference mButtonNational4;
-    private SwitchPreference mButtonInternational4;
+    private CheckBoxPreference mButtonLocal4;
+    private CheckBoxPreference mButtonRegional4;
+    private CheckBoxPreference mButtonNational4;
+    private CheckBoxPreference mButtonInternational4;
 
 
     //Member variables
@@ -342,77 +342,77 @@ public class CellBroadcastSms extends PreferenceActivity
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
-        mButtonBcSms = (SwitchPreference) prefSet.findPreference(
+        mButtonBcSms = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_ENABLE_DISABLE_BC_SMS_KEY);
         mListLanguage = (ListPreference) prefSet.findPreference(
                 LIST_LANGUAGE_KEY);
         // set the listener for the language list preference
         mListLanguage.setOnPreferenceChangeListener(this);
-        mButtonEmergencyBroadcast = (SwitchPreference) prefSet.findPreference(
+        mButtonEmergencyBroadcast = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_EMERGENCY_BROADCAST_KEY);
-        mButtonAdministrative = (SwitchPreference) prefSet.findPreference(
+        mButtonAdministrative = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_ADMINISTRATIVE_KEY);
-        mButtonMaintenance = (SwitchPreference) prefSet.findPreference(
+        mButtonMaintenance = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_MAINTENANCE_KEY);
-        mButtonLocalWeather = (SwitchPreference) prefSet.findPreference(
+        mButtonLocalWeather = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_LOCAL_WEATHER_KEY);
-        mButtonAtr = (SwitchPreference) prefSet.findPreference(
+        mButtonAtr = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_ATR_KEY);
-        mButtonLafs = (SwitchPreference) prefSet.findPreference(
+        mButtonLafs = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_LAFS_KEY);
-        mButtonRestaurants = (SwitchPreference) prefSet.findPreference(
+        mButtonRestaurants = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_RESTAURANTS_KEY);
-        mButtonLodgings = (SwitchPreference) prefSet.findPreference(
+        mButtonLodgings = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_LODGINGS_KEY);
-        mButtonRetailDirectory = (SwitchPreference) prefSet.findPreference(
+        mButtonRetailDirectory = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_RETAIL_DIRECTORY_KEY);
-        mButtonAdvertisements = (SwitchPreference) prefSet.findPreference(
+        mButtonAdvertisements = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_ADVERTISEMENTS_KEY);
-        mButtonStockQuotes = (SwitchPreference) prefSet.findPreference(
+        mButtonStockQuotes = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_STOCK_QUOTES_KEY);
-        mButtonEo = (SwitchPreference) prefSet.findPreference(
+        mButtonEo = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_EO_KEY);
-        mButtonMhh = (SwitchPreference) prefSet.findPreference(
+        mButtonMhh = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_MHH_KEY);
-        mButtonTechnologyNews = (SwitchPreference) prefSet.findPreference(
+        mButtonTechnologyNews = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_TECHNOLOGY_NEWS_KEY);
-        mButtonMultiCategory = (SwitchPreference) prefSet.findPreference(
+        mButtonMultiCategory = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_MULTI_CATEGORY_KEY);
 
-        mButtonLocal1 = (SwitchPreference) prefSet.findPreference(
+        mButtonLocal1 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_LOCAL_GENERAL_NEWS_KEY);
-        mButtonRegional1 = (SwitchPreference) prefSet.findPreference(
+        mButtonRegional1 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_REGIONAL_GENERAL_NEWS_KEY);
-        mButtonNational1 = (SwitchPreference) prefSet.findPreference(
+        mButtonNational1 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_NATIONAL_GENERAL_NEWS_KEY);
-        mButtonInternational1 = (SwitchPreference) prefSet.findPreference(
+        mButtonInternational1 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_INTERNATIONAL_GENERAL_NEWS_KEY);
 
-        mButtonLocal2 = (SwitchPreference) prefSet.findPreference(
+        mButtonLocal2 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_LOCAL_BF_NEWS_KEY);
-        mButtonRegional2 = (SwitchPreference) prefSet.findPreference(
+        mButtonRegional2 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_REGIONAL_BF_NEWS_KEY);
-        mButtonNational2 = (SwitchPreference) prefSet.findPreference(
+        mButtonNational2 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_NATIONAL_BF_NEWS_KEY);
-        mButtonInternational2 = (SwitchPreference) prefSet.findPreference(
+        mButtonInternational2 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_INTERNATIONAL_BF_NEWS_KEY);
 
-        mButtonLocal3 = (SwitchPreference) prefSet.findPreference(
+        mButtonLocal3 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_LOCAL_SPORTS_NEWS_KEY);
-        mButtonRegional3 = (SwitchPreference) prefSet.findPreference(
+        mButtonRegional3 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_REGIONAL_SPORTS_NEWS_KEY);
-        mButtonNational3 = (SwitchPreference) prefSet.findPreference(
+        mButtonNational3 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_NATIONAL_SPORTS_NEWS_KEY);
-        mButtonInternational3 = (SwitchPreference) prefSet.findPreference(
+        mButtonInternational3 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_INTERNATIONAL_SPORTS_NEWS_KEY);
 
-        mButtonLocal4 = (SwitchPreference) prefSet.findPreference(
+        mButtonLocal4 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_LOCAL_ENTERTAINMENT_NEWS_KEY);
-        mButtonRegional4 = (SwitchPreference) prefSet.findPreference(
+        mButtonRegional4 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_REGIONAL_ENTERTAINMENT_NEWS_KEY);
-        mButtonNational4 = (SwitchPreference) prefSet.findPreference(
+        mButtonNational4 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_NATIONAL_ENTERTAINMENT_NEWS_KEY);
-        mButtonInternational4 = (SwitchPreference) prefSet.findPreference(
+        mButtonInternational4 = (CheckBoxPreference) prefSet.findPreference(
                 BUTTON_INTERNATIONAL_ENTERTAINMENT_NEWS_KEY);
     }
 

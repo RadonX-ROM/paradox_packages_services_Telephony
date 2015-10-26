@@ -253,8 +253,8 @@ public class CallFeaturesSetting extends PreferenceActivity
     };
 
     /** Whether dialpad plays DTMF tone or not. */
-    private SwitchPreference mButtonAutoRetry;
-    private SwitchPreference mButtonHAC;
+    private CheckBoxPreference mButtonAutoRetry;
+    private CheckBoxPreference mButtonHAC;
     private ListPreference mButtonDTMF;
     private ListPreference mButtonTTY;
     private Preference mPhoneAccountSettingsPreference;
@@ -262,7 +262,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     private PreferenceScreen mVoicemailSettingsScreen;
     private PreferenceScreen mVoicemailSettings;
     private Preference mVoicemailNotificationRingtone;
-    private SwitchPreference mVoicemailNotificationVibrate;
+    private CheckBoxPreference mVoicemailNotificationVibrate;
     private AccountSelectionPreference mDefaultOutgoingAccount;
 
     private class VoiceMailProvider {
@@ -1587,8 +1587,8 @@ public class CallFeaturesSetting extends PreferenceActivity
         }
 
         mButtonDTMF = (ListPreference) findPreference(BUTTON_DTMF_KEY);
-        mButtonAutoRetry = (SwitchPreference) findPreference(BUTTON_RETRY_KEY);
-        mButtonHAC = (SwitchPreference) findPreference(BUTTON_HAC_KEY);
+        mButtonAutoRetry = (CheckBoxPreference) findPreference(BUTTON_RETRY_KEY);
+        mButtonHAC = (CheckBoxPreference) findPreference(BUTTON_HAC_KEY);
         mButtonTTY = (ListPreference) findPreference(BUTTON_TTY_KEY);
         mVoicemailProviders = (ListPreference) findPreference(BUTTON_VOICEMAIL_PROVIDER_KEY);
 
@@ -1600,7 +1600,7 @@ public class CallFeaturesSetting extends PreferenceActivity
             mVoicemailNotificationRingtone =
                     findPreference(BUTTON_VOICEMAIL_NOTIFICATION_RINGTONE_KEY);
             mVoicemailNotificationVibrate =
-                    (SwitchPreference) findPreference(BUTTON_VOICEMAIL_NOTIFICATION_VIBRATE_KEY);
+                    (CheckBoxPreference) findPreference(BUTTON_VOICEMAIL_NOTIFICATION_VIBRATE_KEY);
             initVoiceMailProviders();
         }
 
